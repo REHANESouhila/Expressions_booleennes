@@ -1,24 +1,19 @@
-# Arbre Binaire de Recherche (ABR)
+# Expressions Booléennes
 
-Ce projet contient une implémentation en Java d'un dictionnaire basé sur un Arbre Binaire de Recherche (ABR).
+Le projet "Expressions_booleennes" est une implémentation d'une structure de données pour représenter et évaluer des expressions booléennes. Il est écrit en langage Java et se compose de deux classes principales : "Noeud" et "Eb".
 
-## Classes
+## Classe Noeud
 
-Le projet contient les classes suivantes :
+La classe `Noeud` représente un nœud dans l'arbre de l'expression booléenne. Chaque nœud contient un caractère représentant un opérateur ou une variable booléenne, ainsi que des références vers ses nœuds fils gauche et droit.
 
-* `Element` : Cette classe représente un élément qui contient une clé et une valeur.
-* `Noeud` : Cette classe représente un noeud dans l'ABR. Chaque noeud contient un élément et des références vers son noeud gauche et son noeud droit.
-* `ArbreBinaire` : Cette classe implémente les opérations de base sur un dictionnaire basé sur un ABR, y compris l'ajout, la recherche et la suppression d'éléments.
-* `Main` : Cette classe contient un exemple d'utilisation de l'arbre binaire.
-* `TestArbreBinaire` : Cette classe contient un test de performance pour l'ajout et la suppression d'éléments.
+## Classe Eb
 
-## Fonctionnalités
+La classe `Eb` est la classe principale qui utilise les nœuds pour construire et manipuler des expressions booléennes. Elle offre des fonctionnalités telles que la création d'expressions vides, la création d'expressions avec un seul caractère ou l'application des opérations booléennes (disjonction, conjonction, négation) sur les expressions existantes. De plus, elle fournit des méthodes pour afficher les expressions et les évaluer en utilisant un vecteur de valeurs booléennes.
 
-* **Ajout d'éléments** : Les éléments sont ajoutés en suivant la logique de l'ABR. Si la clé de l'élément est inférieure à la clé du noeud actuel, l'élément est ajouté à gauche, sinon, il est ajouté à droite.
-* **Recherche d'éléments** : La recherche d'un élément se fait également en suivant la logique de l'ABR.
-* **Suppression d'éléments** : La suppression d'un élément se fait en trois cas possibles : Si le noeud à supprimer n'a pas d'enfants, il est simplement supprimé. Si le noeud a un seul enfant, ce dernier remplace le noeud. Si le noeud a deux enfants, son successeur dans l'ordre infixe (le plus petit noeud de son sous-arbre droit) le remplace.
-* **Affichage des éléments** : Les éléments sont affichés dans l'ordre croissant de leurs clés.
+## Exemples d'utilisation
 
-## Test de performance
+Le projet démontre des exemples d'utilisation de la classe `Eb` en créant différentes expressions booléennes et en les évaluant avec un vecteur de valeurs booléennes prédéfinies. Les résultats sont affichés à la console.
 
-La classe TestArbreBinaire génère un grand nombre d'éléments aléatoires et les ajoute à l'arbre. Ensuite, elle supprime un certain nombre d'éléments aléatoires. Le temps nécessaire pour ces opérations est mesuré et affiché.
+## Remarque
+
+Ce projet est une implémentation basique des expressions booléennes et peut être utilisé comme base pour des applications plus avancées impliquant la manipulation et l'évaluation d'expressions logiques.
